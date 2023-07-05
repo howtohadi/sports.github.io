@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>H&M</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="menu.css">
+    <style>
+      
+        h1 {
+            color: #333;
+            text-align: center;
+            animation: scale 1s infinite alternate;
+        }
+
+        @keyframes scale {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        p {
+            line-height: 1.5;
+            text-align: left;
+            text-align: justify;
+        }
+
+        .owner-images {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .owner-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 20px;
+            padding: 5px;
+            transition: transform 0.3s;
+        }
+
+        .owner-image:hover {
+            transform: scale(1.2);
+        }
+  </style>
+</head>
+<body>
+  <div id="head_div"> 
+    <img src="images/logoo.png" height="100px" width="100px">
+    <div id="div_icon">
+      <a href="#"> <img src="images/instagram_PNG10.png" height="25px" width="25px"></a> 
+      <a href="#"> <img src="images/fb.png" height="25px" width="25px"></a> 
+         <a href="#"> <img src="images/pinterest_PNG45.png" height="25px" width="25px"></a> 
+    </div>
+    <div id="div_text">
+    <h>H&M SPORTSWEAR</h>
+   </div>
+</div>
+    <div id="navdiv">
+        <nav>
+            <ul>
+              <li><a  href="home.html">HOME</a></li>
+              <li class="dropdown">
+                  <a href="equipments.html" class="dropbtn"> EQUIPMENTS</a>
+                  <div class="dropdown-content">
+                    <a href="#">Shoes</a>
+                    <a href="#">Bats</a>
+                    <a href="#">Balls</a>
+                  </div>
+              </li>
+              <li><a href="gloves.html">GLOVES</a></li>
+              <li class="dropdown">
+                  <a  href="uniforms.html" class="dropbtn"> UNIFORMS</a>
+                  <div class="dropdown-content">
+                    <a href="#">Soccer Uniform</a>
+                    <a href="#">Basketball Uniform</a>
+                    <a href="#">Cricket Uniform</a>
+                  </div>
+              </li>
+              <li><a class="active" href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1 style="text-align: center;margin-top: 60px;">WEBSITE OWNERS</h1><br><br><br>
+    <div class="owner-images">
+        <div class="owner-image-container">
+            <img class="owner-image" src="images/dp.png" alt="Owner 1"><br><br>
+            <p style="margin-left: 50px;">Haider Ali 092</p>
+        </div>
+        <div class="owner-image-container">
+            <img class="owner-image" src="images/22.png" alt="Owner 2"><br><br>
+            <p style="margin-left: 40px;">Mateen Fatima 084</p>
+        </div>
+    </div>
+    <div class="container">
+      <h1 style="margin-top: 20px;">About H&M SPORTSWEAR</h1><br><br><br>
+      <p>
+         H&M Sportswear is a leading provider of high-quality athletic clothing and gear. We are passionate about helping people achieve their fitness goals by offering comfortable and stylish sportswear for all types of activities.
+      </p>
+      <p>
+          Our mission is to inspire individuals to lead an active lifestyle and to provide them with the apparel they need to perform their best. We believe that when you look good, you feel good, and that confidence translates into better performance.
+      </p>
+      <p>
+          At Sportswear, we strive for excellence in design, functionality, and durability. Our products are made with premium materials to ensure comfort and performance. Whether you're a professional athlete or a casual fitness enthusiast, we have the perfect sportswear to suit your needs.
+      </p>
+      <p>
+          We are committed to customer satisfaction and providing a seamless shopping experience. Our knowledgeable and friendly staff are always ready to assist you with any questions or concerns you may have. Shop with confidence knowing that your satisfaction is our top priority.
+      </p>
+      <p>
+          Thank you for choosing Sportswear. We look forward to being a part of your active journey!
+      </p>
+     
+  </div>
+    
+      <script>window.setTimeout = null;</script>
+    <div class="button-container">
+      <button onclick="goBack()" class="return-button">Return to Previous Page</button>
+  </div> 
+   <script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+    <footer class="footer">
+        <p>&copy; 2023 Example Company. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

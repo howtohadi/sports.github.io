@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Details</title>
+  <link rel="stylesheet" href="buy.css">
+  <link rel="stylesheet" href="menu.css">
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form input values
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var cardNumber = document.getElementById("card-number").value;
+      var expiration = document.getElementById("expiration").value;
+      var cvv = document.getElementById("cvv").value;
+
+      // Check if all fields are filled
+      if (name && email && cardNumber && expiration && cvv) {
+        // Generate alert message and return to previous page
+        alert("Your order has been placed!");
+        window.history.back();
+      } else {
+        alert("Please fill in all the required fields.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Payment Details</h1>
+  <form onsubmit="handleFormSubmit(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="card-number">Card Number:</label>
+    <input type="text" id="card-number" name="card-number" required>
+
+    <label for="expiration">Expiration Date:</label>
+    <input type="month" id="expiration" name="expiration" required>
+
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required>
+
+    <button type="submit">Pay Now</button>
+  </form><br>
+  <footer class="footer">
+    <p>&copy; 2023 Example Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>H&M</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div id="head_div">
+        <img src="images/logoo.png" height="100px" width="130px">
+        <div id="div_search">
+            <form onsubmit="return validateSearch()">
+                <input type="text" id="searchInput" placeholder="Search Products">
+                <button type="submit">Go</button>
+            </form>
+        </div>
+        <div id="div_text1">
+            <h>H&M SPORTSWEAR</h>
+    </div>
+
+    <div id="navdiv" >
+        <nav>
+            <ul>
+                <li><a class="active" href="home.html" onclick="return checkLoginStatus()">HOME</a></li>
+                <li class="dropdown">
+                    <a href="equipments.html" class="dropbtn" onclick="return checkLoginStatus()">EQUIPMENTS</a>
+                    <div class="dropdown-content">
+                        <a href="#">Shoes</a>
+                        <a href="#">Bats</a>
+                        <a href="#">Balls</a>
+                    </div>
+                </li>
+                <li><a href="gloves.html" onclick="return checkLoginStatus()">GLOVES</a></li>
+                <li class="dropdown">
+                    <a href="uniforms.html" class="dropbtn" onclick="return checkLoginStatus()">UNIFORMS</a>
+                    <div class="dropdown-content">
+                        <a href="#">Soccer Uniform</a>
+                        <a href="#">Basketball Uniform</a>
+                        <a href="#">Cricket Uniform</a>
+                    </div>
+                </li>
+                <li><a href="about.html" onclick="return checkLoginStatus()">ABOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <div id="form">
+            <div id="logindiv">
+                <form class="login-form" onsubmit="return validateLoginForm()">
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div id="signup">
+                        <label for="signup">Don't have an account?<a href="#">Signup</a></label>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="catgy">
+        <p>Our Categories</p>
+    </div>
+    <div class="products">
+        <div id="row">
+            <div id="column"><a href="equipments.html" onclick="return checkLoginStatus()"><img src="images/eqipment.png" height="375px" width="375px"></a></div>
+            <div id="column"><a href="gloves.html" onclick="return checkLoginStatus()"><img src="images/gloves.png" height="375px" width="375px"></a></div>
+            <div id="column"><a href="uniforms.html" onclick="return checkLoginStatus()"><img src="images/unifrom.png" height="375px" width="375px"></a></div>
+        </div>
+        <div class="catgy">
+            <p>Featured Products</p>
+            <div id="row">
+                <div id="column"><a href="equipments.html" onclick="return checkLoginStatus()"><img src="images/shoes_1-removebg-preview.png" height="375px" width="375px"></a></div>
+                <h>soccer uniforms</h>
+                <div id="column"><a href="gloves.html" onclick="return checkLoginStatus()"><img src="images/uniform1.png" height="375px" width="375px"></a></div>
+                <div id="column"><a href="uniforms.html" onclick="return checkLoginStatus()"><img src="images/eq3.png" height="375px" width="375px"></a></div>
+            </div>
+        </div>
+    </div>
+<br><br><br><br><br><br><br><br><br><br>
+    <footer class="footer">
+        <p>&copy; 2023 Example Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function validateSearch() {
+            var searchInput = document.getElementById("searchInput").value;
+
+            if (searchInput.trim() === "") {
+                alert("Please enter a search query.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateLoginForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username.trim() === "") {
+                alert("Please enter a username.");
+                return false;
+            }
+
+            if (password.trim() === "") {
+                alert("Please enter a password.");
+                return false;
+            }
+
+            // Perform login verification here
+            // Replace the following code with your actual login logic
+            if (username === "hadi" && password === "1234") {
+                alert("Login successful!");
+                // Redirect the user to the next page after successful login
+                window.location.href="equipments.html";
+            } else {
+                alert("Invalid username or password.");
+            }
+
+            return false; // Prevent form submission
+        }
+
+        function checkLoginStatus() {
+            var loggedIn = false; // Replace with your actual login status check logic
+
+            if (!loggedIn) {
+                alert("Please log in first.");
+                window.location.href = "home.html"; // Redirect to the login page
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
